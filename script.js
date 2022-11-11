@@ -12,7 +12,9 @@ async function getQuotes() {
         const response = await fetch(API_URL);
         api_quotes = await response.json();
         newQuote();
-    } catch (error) {}
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 function newQuote() {
